@@ -1,0 +1,16 @@
+DEPENDENCIES
+  monit
+    path: .
+    metadata: true
+  monit-config-test
+    path: test/fixtures/cookbooks/monit-config-test
+
+GRAPH
+  monit (0.1.0)
+    poise (~> 2.2)
+    poise-service (~> 1.0)
+  monit-config-test (0.0.1)
+    monit (>= 0.0.0)
+  poise (2.4.0)
+  poise-service (1.0.2)
+    poise (~> 2.0)
