@@ -25,7 +25,7 @@ Example below:
 ```ruby
 monit_config 'your_dope_service' do
   check  'process'
-  with   'pidfile "/var/run/your_dope_service"
+  with   'pidfile "/var/run/your_dope_service"'
   start_program   "/bin/bash -c '/bin/sleep 5; /etc/init.d/your_dope_service start'"
   stop_program    '/etc/init.d/your_dope_service stop'
   notifies :restart, "service[monit_#{new_resource.instance_name}]", :immediately
